@@ -21,13 +21,13 @@ function ExerciseList() {
   const [exercise,setExercise] = useState([]);
 
   useEffect(()=>{
-    axios.get('http://localhost:5000/exercises/')
+    axios.get('https://exercise-mern-api.onrender.com/exercises/')
     .then(res => setExercise(res.data))
     .catch(err => console.log(err))
   },[])
 
   const deleteExercise=(id)=>{
-    axios.delete(`http://localhost:5000/exercises/${id}`)
+    axios.delete(`https://exercise-mern-api.onrender.com/exercises/${id}`)
     .then(res=> console.log(res.data))
 
     setExercise(exercise.filter(el => el._id!==id));
