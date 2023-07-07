@@ -15,7 +15,7 @@ function CreateUser() {
     }
     console.log(user);
 
-      axios.post('http://localhost:5000/users/add',user)
+      axios.post('https://exercise-mern-app.onrender.com/users/add',user)
       .then(res=>console.log(res.data))
       .catch(err=>console.log(err));
   
