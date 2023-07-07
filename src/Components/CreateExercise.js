@@ -38,7 +38,7 @@ const handleSubmit=(e)=>{
         date:date
     }
     console.log(exercise);
-  axios.post('http://exercise-mern-app.onrender.com/exercises/add',exercise)
+  axios.post('https://exercise-mern-api.onrender.com/exercises/add',exercise)
   .then(res=>console.log(res.data))
   .catch(err=>console.log(err))
 
