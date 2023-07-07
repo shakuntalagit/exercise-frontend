@@ -14,7 +14,7 @@ function CreateExercise() {
     const [users,setUsers] = useState([]);
 
     useEffect(()=>{
-     axios.get('https://exercise-mern-app.onrender.com/users/')
+     axios.get('https://exercise-mern-api.onrender.com/users/')
      .then(resp =>{
       console.log(resp);
       if(resp.data.length>0){
