@@ -16,7 +16,7 @@ function EditExercise() {
     const {id} = useParams();
 
     useEffect(()=>{
-     axios.get(`http://localhost:5000/exercises/${id}`)
+     axios.get(`https://exercise-mern-api.onrender.com/exercises/${id}`)
      .then(resp =>{
      setUsername(resp.data.username);
      setDescription(resp.data.description);
