@@ -25,7 +25,7 @@ function EditExercise() {
      })
      .catch(err=>console.log(err))
 
-      axios.get('http://localhost:5000/users/')
+      axios.get('https://exercise-mern-api.onrender.com/users/')
      .then(resp =>{
       console.log(resp);
       if(resp.data.length>0){
@@ -51,7 +51,7 @@ const handleSubmit=(e)=>{
         date:date
     }
     console.log(exercise);
-  axios.post(`http://localhost:5000/exercises/update/${id}`,exercise)
+  axios.post(`https://exercise-mern-api.onrender.com/exercises/update/${id}`,exercise)
   .then(res=>console.log(res.data))
   .catch(err=>console.log(err))
 
